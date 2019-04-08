@@ -12,8 +12,7 @@ public class ServerTimeController {
     @RequestMapping("/ajax/getServerTime")
     public void getServerTime(HttpServletResponse response) throws Exception{
 
-        response.setContentType("text/text");
-        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/text;charset=UTF-8");
 
         // 服务端的时间
         String time = new java.util.Date().toLocaleString();
