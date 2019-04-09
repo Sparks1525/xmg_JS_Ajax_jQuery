@@ -22,7 +22,7 @@ public class LinkageByXMLController {
     @RequestMapping("/linkage/xml_getProvinces")
     public void getProvinces(HttpServletResponse response) throws Exception{
 
-        response.setContentType("text/text;charset=UTF-8");
+        response.setContentType("text/xml;charset=UTF-8");
 
         //把所有的省份存储在内存中的Document文档中
         Document doc = DocumentBuilderFactory.newInstance()
@@ -50,7 +50,7 @@ public class LinkageByXMLController {
     @RequestMapping("/linkage/xml_getCitysByPid")
     public void getCitysByPid(HttpServletRequest request, HttpServletResponse response) throws Exception{
 
-        response.setContentType("text/text;charset=UTF-8");
+        response.setContentType("text/xml;charset=UTF-8");
 
         Long pid = Long.parseLong(request.getParameter("pid"));
 
@@ -60,7 +60,7 @@ public class LinkageByXMLController {
         Document doc = DocumentBuilderFactory.newInstance()
                 .newDocumentBuilder().newDocument();
         doc.setXmlVersion("1.0");
-        Element root = doc.createElement("data");
+        Element root = doc.createElement("datas");
         doc.appendChild(root);
         for(City c : citys){
             Element dataEl = doc.createElement("data");
