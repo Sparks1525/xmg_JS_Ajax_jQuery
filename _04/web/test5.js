@@ -17,8 +17,6 @@ window.onload = function () {
 function getCitysByPid() {
     var pid = document.getElementById("province").value;
 
-
-
     if(!parseInt(pid)){
         return;
     }
@@ -35,7 +33,6 @@ function getCitysByPid() {
 
     ajax.send();
 }
-
 
 
 

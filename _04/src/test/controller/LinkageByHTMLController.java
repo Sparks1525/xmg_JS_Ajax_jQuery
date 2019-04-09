@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-public class LinkageByHtmlController {
+public class LinkageByHTMLController {
 
     // 加载所有的省份
 
